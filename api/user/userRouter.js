@@ -26,7 +26,7 @@ let  enc =  (req, res, next) => {
     next();
 }*/
 
-router.post("/createUser",encrypt, createUserVal, createUser);
+router.post("/createUser",createUserVal, encrypt, createUser);
 router.post("/loginUser", loginUserVal, loginUser);
 router.get("/lastLogin", lastLogins);
 router.post("/topSalary",salaryUserVal, topSalaryTaker);
