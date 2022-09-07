@@ -6,15 +6,15 @@ const pool = require('./config/database');
 app.use(express.json());
 
 
-pool.query(`describe users`,
-(err, data) => {
-    if(err) {
-        console.error(err);
-        return;
-    }
-    // rows fetch
-    console.log(data);
-});
+// pool.query(`select * from users`,
+// (err, data) => {
+//     if(err) {
+//         console.error(err);
+//         return;
+//     }
+//     // rows fetch
+//     console.log(data);
+// });
 
 // msgId = Date.now();
 // console.log(msgId)

@@ -8,7 +8,11 @@ const {
 } = require("./userController");
 
 const {encrypt, decypt}  = require('../../auth/auth')
-
+const {
+  loginUserVal,
+  createUserVal,
+  salaryUserVal
+} = require('../user/validate')
 
 /*
 let  enc =  (req, res, next) => {
@@ -21,9 +25,10 @@ let  enc =  (req, res, next) => {
     console.log(result)
     next();
 }*/
-router.post("/createUser",encrypt, createUser);
-router.post("/loginUser", loginUser);
+
+router.post("/createUser",encrypt, createUserVal, createUser);
+router.post("/loginUser", loginUserVal, loginUser);
 router.get("/lastLogin", lastLogins);
-router.post("/topSalary", topSalaryTaker);
+router.post("/topSalary",salaryUserVal, topSalaryTaker);
 
 module.exports = router;
