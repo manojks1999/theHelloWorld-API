@@ -30,7 +30,6 @@ const createUserSchema =Joi.object({
            .required(), 
                 
     salary: Joi.number()
-           .max(50)
            .required(), 
                 
     email: Joi.string()
